@@ -11,7 +11,7 @@ namespace Game
         static void Main(string[] args)
         {
             Console.WriteLine("Commited by dnmitev");
-            Console.WriteLine();
+            Console.WriteLine("Commit by Angel Raev");
         }
     }
 }

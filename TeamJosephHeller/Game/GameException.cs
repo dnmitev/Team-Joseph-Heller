@@ -1,16 +1,17 @@
-﻿namespace Game
+﻿namespace NinjaWars
 {
     using System;
 
-    public class GameException: ApplicationException
+    public class GameException : ApplicationException
     {
         //field
         public string ExMessage { get; set; }
-        //construktors
+
+        //constructors
         public GameException(string ExMessage)
-        :base(ExMessage)
+            : base(ExMessage)
         {
-            
+
         }
 
         public GameException(string ExMessage, Exception innerEx)

@@ -11,6 +11,11 @@
     {
         static void Main()
         {
+            //set console size and Intro
+            Console.SetWindowSize(80, 35);            
+            Intro.Title();
+            //TODO player menu
+
             IRenderer renderer = new ConsoleRenderer(GameBorder.WorldRows, GameBorder.WorldCols);
             IUserInterface keyboard = KeyboardInterface.Instance;
 

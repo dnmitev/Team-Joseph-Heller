@@ -4,8 +4,7 @@
 
     public static class GameBorder
     {
-        public const int WorldRows = 23;
-        public const int WorldCols = 40;
-        
+        public const int WorldRows = 35;
+        public const int WorldCols = 60;                
     }
 }

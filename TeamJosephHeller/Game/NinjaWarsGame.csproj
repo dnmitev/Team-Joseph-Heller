@@ -56,6 +56,7 @@
     <Compile Include="Interfaces\IRenderable.cs" />
     <Compile Include="Interfaces\IRenderer.cs" />
     <Compile Include="Interfaces\IUserInterface.cs" />
+    <Compile Include="Intro.cs" />
     <Compile Include="KeyboardInterface.cs" />
     <Compile Include="MatrixCoord.cs" />
     <Compile Include="MovingObject.cs" />

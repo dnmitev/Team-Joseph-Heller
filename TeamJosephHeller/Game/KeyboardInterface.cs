@@ -33,7 +33,7 @@ namespace NinjaWars
 
         public void ProcessInput()
         {
-            if (Console.KeyAvailable)
+            while (Console.KeyAvailable)
             {
                 var keyInfo = Console.ReadKey();
 

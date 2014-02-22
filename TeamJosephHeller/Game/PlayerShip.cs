@@ -9,6 +9,7 @@ namespace NinjaWars
     {
         private static readonly char[,] playerShipBody = new char[,] { { '@' }, { '@' } };
         private static readonly MatrixCoord defaultPlayerSpeed = new MatrixCoord(0, 0);
+        private static readonly MatrixCoord bulletSpeed = new MatrixCoord(-1, 0);
 
         public PlayerShip(int col)
             : base(new MatrixCoord(GameBorder.WorldRows - playerShipBody.GetUpperBound(0) - 1, col), playerShipBody, defaultPlayerSpeed)
@@ -17,7 +18,7 @@ namespace NinjaWars
 
         public override MovingObject Fire()
         {
-            throw new NotImplementedException();
+            return new Bullet(this.TopLeft, bulletSpeed);
         }
 
         public virtual void MoveLeft()

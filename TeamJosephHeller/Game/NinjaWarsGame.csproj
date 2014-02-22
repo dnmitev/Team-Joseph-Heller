@@ -41,12 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bullet.cs" />
     <Compile Include="CollisionData.cs" />
+    <Compile Include="CollisionDispatcher.cs" />
     <Compile Include="ConsoleRenderer.cs" />
     <Compile Include="EnemyShip.cs" />
     <Compile Include="Engine.cs" />
     <Compile Include="GameBorder.cs" />
     <Compile Include="GameException.cs" />
+    <Compile Include="GameHouseKeeping.cs" />
     <Compile Include="GameObject.cs" />
     <Compile Include="Interfaces\ICollidable.cs" />
     <Compile Include="Interfaces\IObjectProducer.cs" />

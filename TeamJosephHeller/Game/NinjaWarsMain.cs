@@ -26,12 +26,17 @@
                 gameEngine.MovePlayerShipRight();
             };
 
+            keyboard.OnActionPressed += (sender, eventInfo) =>
+            {
+                gameEngine.AddObject(gameEngine.EngagePlayerWeapons());
+            };
+
             PlayerShip player = new PlayerShip(5);
             gameEngine.AddPlayer(player);
 
             gameEngine.AddObject(player);
 
-            EnemyShip enemy = new EnemyShip(7);
+            EnemyShip enemy = new EnemyShip(5);
             gameEngine.AddObject(enemy);
 
             gameEngine.Run();

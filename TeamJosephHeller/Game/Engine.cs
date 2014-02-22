@@ -9,7 +9,7 @@ namespace NinjaWars
 {
     public class Engine
     {
-        private const int ThreadSleepTime = 500;
+        private const int ThreadSleepTime = 100;
 
         IRenderer renderer;
         IUserInterface userInterface;
@@ -98,7 +98,7 @@ namespace NinjaWars
                     this.renderer.EnqueueForRendering(obj);
                 }
 
-                // CollisionDispatcher.HandleCollisions(this.movingObjects, this.staticObjects);
+                CollisionDispatcher.HandleCollisions(this.allObjects);
 
                 List<GameObject> producedObjects = new List<GameObject>();
 
@@ -107,7 +107,7 @@ namespace NinjaWars
                     producedObjects.AddRange(obj.ProduceObjects());
                 }
 
-                this.allObjects.RemoveAll(obj => obj.IsDestroyed);
+                this.allObjects.RemoveAll(obj =>  obj.IsDestroyed);
                 // this.movingObjects.RemoveAll(obj => obj.IsDestroyed);
                 // this.staticObjects.RemoveAll(obj => obj.IsDestroyed);
 
@@ -121,6 +121,11 @@ namespace NinjaWars
         public void AddObject(GameObject obj)
         {
             this.allObjects.Add(obj);
+        }
+
+        public GameObject EngagePlayerWeapons()
+        {
+            return this.playerShip.Fire();
         }
     }
 }

@@ -51,6 +51,13 @@
       <FileName>EnemyShip.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="NinjaWars.Bullet">
+    <Position X="1.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Bullet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Struct Name="NinjaWars.MatrixCoord">
     <Position X="10.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace NinjaWars
 {
-    public class MovingObject : GameObject
+    public abstract class MovingObject : GameObject
     {
         public MatrixCoord Speed { get; protected set; }
 

@@ -12,7 +12,7 @@ namespace NinjaWars.Interfaces
 
         List<MatrixCoord> GetCollisionProfile();
 
-        void RespondToCollision(CollisionData collisionData);
+        void RespondToCollision(ICollidable colidedWith);
 
         string GetCollisionGroupString();
     }

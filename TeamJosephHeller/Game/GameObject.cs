@@ -62,11 +62,8 @@ namespace NinjaWars
             return profile;
         }
 
-        public virtual void RespondToCollision(CollisionData collisionData)
-        {
-            throw new NotImplementedException();
-        }
-
+        public abstract void RespondToCollision(ICollidable collideWith);
+ 
         public virtual bool CanCollideWith(string otherCollisionGroupString)
         {
             return GameObject.CollisionGroupString == otherCollisionGroupString;

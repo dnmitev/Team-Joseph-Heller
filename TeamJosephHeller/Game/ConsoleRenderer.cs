@@ -20,6 +20,10 @@ namespace NinjaWars
             this.renderContextMatrixRows = renderContextMatrix.GetLength(0);
             this.renderContextMatrixCols = renderContextMatrix.GetLength(1);
 
+            //Console.SetWindowSize(GameBorder.WorldCols, GameBorder.WorldRows);
+            //Console.BufferHeight = GameBorder.WorldRows;
+            //Console.BufferWidth = GameBorder.WorldCols;
+
             this.ClearQueue();
         }
 

@@ -7,11 +7,11 @@ namespace NinjaWars
 {
     public class PlayerShip : Ship
     {
-        private static readonly char[,] playerShipBody = new char[,] { { '@' } };
+        private static readonly char[,] playerShipBody = new char[,] { { '@' }, { '@' } };
         private static readonly MatrixCoord defaultPlayerSpeed = new MatrixCoord(0, 0);
 
-        public PlayerShip(MatrixCoord topLeft)
-            : base(topLeft, playerShipBody, defaultPlayerSpeed)
+        public PlayerShip(int col)
+            : base(new MatrixCoord(GameBorder.WorldRows - playerShipBody.GetUpperBound(0) - 1, col), playerShipBody, defaultPlayerSpeed)
         {
         }
 
@@ -22,12 +22,12 @@ namespace NinjaWars
 
         public virtual void MoveLeft()
         {
-            this.TopLeft.Col--;
+            this.topLeft.Col = this.TopLeft.Col - 1; // TODO: check logic!!! property or field - topLeft vs TopLeft
         }
 
         public virtual void MoveRight()
         {
-            this.TopLeft.Col++;
+            this.topLeft.Col = this.TopLeft.Col + 1; // TODO: check logic!!! property or field - topLeft vs TopLeft
         }
     }
 }

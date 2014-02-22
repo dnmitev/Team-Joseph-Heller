@@ -17,12 +17,12 @@ namespace NinjaWars
         {
             get
             {
-                return new MatrixCoord(topLeft.Row, topLeft.Col);
+                return this.topLeft;
             }
 
             protected set
             {
-                this.topLeft = new MatrixCoord(value.Row, value.Col);
+                this.topLeft = value;
             }
         }
 
@@ -112,7 +112,7 @@ namespace NinjaWars
 
         MatrixCoord IRenderable.GetTopLeft()
         {
-            throw new NotImplementedException();
+            return this.topLeft;
         }
 
         IEnumerable<GameObject> IObjectProducer.ProduceObjects()

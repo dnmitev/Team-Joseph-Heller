@@ -38,10 +38,17 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="NinjaWars.PlayerShip">
-    <Position X="8.5" Y="10.25" Width="1.5" />
+    <Position X="8" Y="10.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAIQBAAAAAAAAA=</HashCode>
       <FileName>PlayerShip.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NinjaWars.EnemyShip">
+    <Position X="5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAABAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EnemyShip.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Struct Name="NinjaWars.MatrixCoord">

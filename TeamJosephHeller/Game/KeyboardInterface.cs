@@ -41,7 +41,7 @@ namespace NinjaWars
                 {
                     if (this.OnLeftPressed != null)
                     {
-                        this.OnLeftPressed(this, new EventArgs());
+                        this.OnLeftPressed(KeyboardInterface.Instance, new EventArgs());
                     }
                 }
 
@@ -49,7 +49,7 @@ namespace NinjaWars
                 {
                     if (this.OnRightPressed != null)
                     {
-                        this.OnRightPressed(this, new EventArgs());
+                        this.OnRightPressed(KeyboardInterface.Instance, new EventArgs());
                     }
                 }
 
@@ -57,7 +57,7 @@ namespace NinjaWars
                 {
                     if (this.OnActionPressed != null)
                     {
-                        this.OnActionPressed(this, new EventArgs());
+                        this.OnActionPressed(KeyboardInterface.Instance, new EventArgs());
                     }
                 }
             }

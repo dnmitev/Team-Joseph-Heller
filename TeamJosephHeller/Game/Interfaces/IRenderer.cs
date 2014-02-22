@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NinjaWars.Interfaces;
-
-namespace NinjaWars.Interfaces
+﻿namespace NinjaWars.Interfaces
 {
+    using System;
+
     public interface IRenderer
     {
         void EnqueueForRendering(IRenderable obj);

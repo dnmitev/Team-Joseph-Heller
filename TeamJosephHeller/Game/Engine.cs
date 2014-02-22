@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NinjaWars.Interfaces;
-
-namespace NinjaWars
+﻿namespace NinjaWars
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using NinjaWars.Interfaces;
+
     public class Engine
     {
         private const int ThreadSleepTime = 100;
@@ -107,7 +105,7 @@ namespace NinjaWars
                     producedObjects.AddRange(obj.ProduceObjects());
                 }
 
-                this.allObjects.RemoveAll(obj =>  obj.IsDestroyed);
+                this.allObjects.RemoveAll(obj => obj.IsDestroyed);
                 // this.movingObjects.RemoveAll(obj => obj.IsDestroyed);
                 // this.staticObjects.RemoveAll(obj => obj.IsDestroyed);
 

@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NinjaWars.Interfaces;
-
+﻿
 namespace NinjaWars
 {
+    using System;
+    using System.Linq;
+    using System.Text;
+    using NinjaWars.Interfaces;
+
     public class ConsoleRenderer : IRenderer
     {
         int renderContextMatrixRows;

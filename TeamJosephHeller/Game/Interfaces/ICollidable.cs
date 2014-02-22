@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using NinjaWars;
-
-namespace NinjaWars.Interfaces
+﻿namespace NinjaWars.Interfaces
 {
+    using System;
+    using System.Collections.Generic;
+
     public interface ICollidable
     {
         bool CanCollideWith(string objectType);

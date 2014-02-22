@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace NinjaWars
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
     public class CollisionData
     {
         // public readonly MatrixCoord CollisionForceDirection;

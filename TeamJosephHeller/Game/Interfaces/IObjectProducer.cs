@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace NinjaWars.Interfaces
+﻿namespace NinjaWars.Interfaces
 {
+    using System;
+    using System.Collections.Generic;
+
     public interface IObjectProducer
     {
         IEnumerable<GameObject> ProduceObjects();

@@ -1,16 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace NinjaWars
+﻿namespace NinjaWars
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
     class CollisionDispatcher
     {
         static public void HandleCollisions(List<GameObject> produced)
         {
-            var usedSpace = new Dictionary<MatrixCoord,GameObject>();
+            var usedSpace = new Dictionary<MatrixCoord, GameObject>();
 
             foreach (var item in produced)
             {

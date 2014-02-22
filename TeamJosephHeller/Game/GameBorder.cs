@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace NinjaWars
+﻿namespace NinjaWars
 {
+    using System;
+
     public static class GameBorder
     {
         public const int WorldRows = 23;

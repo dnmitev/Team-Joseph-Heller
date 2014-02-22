@@ -10,5 +10,6 @@ namespace NinjaWars
     {
         public const int WorldRows = 23;
         public const int WorldCols = 40;
+        
     }
 }

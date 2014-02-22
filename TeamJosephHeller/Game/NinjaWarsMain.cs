@@ -10,7 +10,7 @@
     {
         static void Main()
         {
-            Console.WriteLine("Commited by dnmitev");
+            Console.WriteLine("Commited by dnmitev changed");
             Console.WriteLine("Commit by Angel Raev");
             Console.WriteLine(123);
         }

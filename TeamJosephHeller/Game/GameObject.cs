@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NinjaWars.Interfaces;
-
-namespace NinjaWars
+﻿namespace NinjaWars
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using NinjaWars.Interfaces;
+
     public abstract class GameObject : IObjectProducer, IRenderable, ICollidable
     {
         public const string CollisionGroupString = "object";
@@ -63,7 +61,7 @@ namespace NinjaWars
         }
 
         public abstract void RespondToCollision(ICollidable collideWith);
- 
+
         public virtual bool CanCollideWith(string otherCollisionGroupString)
         {
             return GameObject.CollisionGroupString == otherCollisionGroupString;

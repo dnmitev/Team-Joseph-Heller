@@ -1,32 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace NinjaWars
+﻿namespace NinjaWars
 {
+    using System;
+    using System.Linq;
+
     public struct MatrixCoord
     {
-        public int Row { get; set; }
-
-        public int Col { get; set; }
-
-        public MatrixCoord(int row, int col)
-            : this()
+        public MatrixCoord(int row, int col) : this()
         {
             this.Row = row;
             this.Col = col;
         }
 
-        public static MatrixCoord operator +(MatrixCoord a, MatrixCoord b)
-        {
-            return new MatrixCoord(a.Row + b.Row, a.Col + b.Col);
-        }
+        public int Row { get; set; }
 
-        public static MatrixCoord operator -(MatrixCoord a, MatrixCoord b)
-        {
-            return new MatrixCoord(a.Row - b.Row, a.Col - b.Col);
-        }
+        public int Col { get; set; }
 
         public bool Equals(MatrixCoord obj)
         {
@@ -37,5 +24,14 @@ namespace NinjaWars
         //{
         //    return this.Row.GetHashCode() * 7 + this.Col;
         //}
+        public static MatrixCoord operator +(MatrixCoord a, MatrixCoord b)
+        {
+            return new MatrixCoord(a.Row + b.Row, a.Col + b.Col);
+        }
+
+        public static MatrixCoord operator -(MatrixCoord a, MatrixCoord b)
+        {
+            return new MatrixCoord(a.Row - b.Row, a.Col - b.Col);
+        }
     }
 }

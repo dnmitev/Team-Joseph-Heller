@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using NinjaWars.Interfaces;
-
-namespace NinjaWars
+﻿namespace NinjaWars
 {
+    using System;
+    using NinjaWars.Interfaces;
+
     public abstract class Ship : MovingObject
     {
         public new const string CollisionGroupString = "ship";

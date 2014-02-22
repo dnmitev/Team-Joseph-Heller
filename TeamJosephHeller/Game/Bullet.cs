@@ -1,11 +1,9 @@
-﻿using NinjaWars.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace NinjaWars
+﻿namespace NinjaWars
 {
+    using NinjaWars.Interfaces;
+    using System;
+    using System.Linq;
+
     public class Bullet : MovingObject
     {
         public new const string CollisionGroupString = "bullet";

@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace NinjaWars.Interfaces
+﻿namespace NinjaWars.Interfaces
 {
+    using System;
+
     public interface IUserInterface
     {
         event EventHandler OnLeftPressed;

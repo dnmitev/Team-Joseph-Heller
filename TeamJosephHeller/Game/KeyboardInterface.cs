@@ -1,21 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NinjaWars.Interfaces;
-
-namespace NinjaWars
+﻿namespace NinjaWars
 {
-    class KeyboardInterface : IUserInterface
+    using System;
+    using System.Linq;
+    using NinjaWars.Interfaces;
+
+    internal class KeyboardInterface : IUserInterface
     {
-        private static KeyboardInterface instance;
+        private static readonly KeyboardInterface instance;
 
         // Initialize the single instance
         static KeyboardInterface()
         {
             instance = new KeyboardInterface();
         }
+
+        // Private constructor – protects direct instantiation
+        private KeyboardInterface()
+        {
+        }
+
+        public event EventHandler OnLeftPressed;
+
+        public event EventHandler OnRightPressed;
+
+        public event EventHandler OnActionPressed;
 
         // The property for taking the single instance
         public static KeyboardInterface Instance
@@ -24,11 +32,6 @@ namespace NinjaWars
             {
                 return instance;
             }
-        }
-
-       // Private constructor – protects direct instantiation
-        private KeyboardInterface()
-        {
         }
 
         public void ProcessInput()
@@ -62,11 +65,5 @@ namespace NinjaWars
                 }
             }
         }
-
-        public event EventHandler OnLeftPressed;
-
-        public event EventHandler OnRightPressed;
-
-        public event EventHandler OnActionPressed;
     }
 }

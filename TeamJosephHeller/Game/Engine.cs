@@ -84,10 +84,6 @@
             while (true)
             {
 
-                this.playerShip.OnKilled += (sender, eventInfo) =>
-                {
-                    this.Pause();
-                };
 
                 this.renderer.RenderAll();
 

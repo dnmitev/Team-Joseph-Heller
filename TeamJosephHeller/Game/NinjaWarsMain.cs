@@ -45,6 +45,9 @@
             gameEngine.AddObject(enemy);
 
             gameEngine.Run();
+
+            //test
+            //test
         }
     }
 }

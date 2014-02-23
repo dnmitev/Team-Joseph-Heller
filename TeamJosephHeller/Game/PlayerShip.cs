@@ -12,6 +12,7 @@
             { '/','@','\\' },
             { ' ','\"',' '}
         };
+
         private static readonly byte  initialLifes = 5;
 
         private static readonly MatrixCoord defaultPlayerSpeed = new MatrixCoord(0, 0);
@@ -21,7 +22,8 @@
             : base(
                     new MatrixCoord(GameBorder.WorldRows - playerShipBody.GetUpperBound(0) - 1, col),
                     playerShipBody,
-                    defaultPlayerSpeed)
+                    defaultPlayerSpeed
+                  )
         {
             this.Lifes = initialLifes;
         }

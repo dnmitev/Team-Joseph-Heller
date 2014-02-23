@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Security;
-using System.Threading;
-
-namespace NinjaWars
+﻿namespace NinjaWars
 {
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+    using System.Linq;
+    using System.Security;
+    using System.Threading;
+
     public static class Intro
     { 
         public static void Title()

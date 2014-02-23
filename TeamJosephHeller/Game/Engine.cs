@@ -83,10 +83,7 @@
         {
             while (true)
             {
-                this.playerShip.OnKilled += (sender, eventInfo) =>
-                {
-                    this.Pause();
-                };
+
 
                 this.renderer.RenderAll();
 
@@ -138,10 +135,9 @@
             return this.playerShip.Fire();
         }
 
-        public void Pause()
+        public static void Pause()
         {
-            Console.WriteLine("killed");
-            Thread.Sleep(100);
+            Console.ReadKey();
         }
 
         static List<GameObject> GenerateRandomObject()

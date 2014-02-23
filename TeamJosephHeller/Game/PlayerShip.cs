@@ -66,11 +66,10 @@
             if (this.IsDestroyed)
             {
                 this.Lifes--;
-
-                if (this.OnKilled != null)
+                this.OnKilled += (sender, eventInfo) =>
                 {
-                    this.OnKilled(this, new EventArgs());
-                }
+                    Engine.Pause();
+                };
 
                 if (this.Lifes > 0)
                 {
@@ -78,6 +77,17 @@
                     this.IsDestroyed = false;  
                 }
             }
+        }
+
+        public override void Update()
+        {
+            base.Update();
+            if (this.OnKilled != null)
+            {
+                this.OnKilled(this, new EventArgs());
+            }
+            this.OnKilled = null;
+
         }
     }
 }

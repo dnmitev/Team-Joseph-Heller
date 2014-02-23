@@ -46,8 +46,6 @@
 
             gameEngine.Run();
 
-            //test
-            //test
         }
     }
 }

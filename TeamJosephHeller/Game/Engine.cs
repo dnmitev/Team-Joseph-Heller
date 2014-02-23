@@ -4,6 +4,7 @@
     using System.Collections.Generic;
     using System.Linq;
     using NinjaWars.Interfaces;
+    using System.Threading;
 
     public class Engine
     {
@@ -82,6 +83,10 @@
         {
             while (true)
             {
+                this.playerShip.OnKilled += (sender, eventInfo) =>
+                {
+                    this.Pause();
+                };
                 this.renderer.RenderAll();
 
                 System.Threading.Thread.Sleep(ThreadSleepTime);
@@ -124,6 +129,12 @@
         public GameObject EngagePlayerWeapons()
         {
             return this.playerShip.Fire();
+        }
+
+        public void Pause()
+        {
+            Console.WriteLine("killed");
+            Thread.Sleep(100);
         }
     }
 }

@@ -12,7 +12,7 @@
         static void Main()
         {
             //set console size and Intro
-            Console.SetWindowSize(80, 35);            
+            Console.SetWindowSize(80, 35);
             Intro.Title();
             //TODO player menu
 
@@ -43,6 +43,9 @@
 
             EnemyShip enemy = new EnemyShip(5);
             gameEngine.AddObject(enemy);
+
+            Item item = new Item(new MatrixCoord(1, 2));
+            gameEngine.AddObject(item);
 
             gameEngine.Run();
 

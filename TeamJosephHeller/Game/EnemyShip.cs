@@ -16,7 +16,7 @@
         private static readonly MatrixCoord defaultEnemySpeed = new MatrixCoord(0, 0);
         private static readonly MatrixCoord bulletSpeed = new MatrixCoord(1, 0);
 
-        private const int ShootProbability = 25;
+        private const int ShootProbability = 3;
 
         public EnemyShip(int col)
             : base(new MatrixCoord(enemyShipBody.GetUpperBound(0), col), enemyShipBody, defaultEnemySpeed)

@@ -115,10 +115,16 @@
                 // this.movingObjects.RemoveAll(obj => obj.IsDestroyed);
                 // this.staticObjects.RemoveAll(obj => obj.IsDestroyed);
 
-                foreach (var obj in producedObjects)
-                {
-                    this.AddObject(obj);
-                }
+                AddGameObjectsToEngine(producedObjects);
+                AddGameObjectsToEngine(GenerateRandomObject());
+            }
+        }
+
+        private void AddGameObjectsToEngine(List<GameObject> producedObjects)
+        {
+            foreach (var obj in producedObjects)
+            {
+                this.AddObject(obj);
             }
         }
 
@@ -136,6 +142,39 @@
         {
             Console.WriteLine("killed");
             Thread.Sleep(100);
+        }
+
+        static List<GameObject> GenerateRandomObject()
+        {
+            MatrixCoord initialCoord = new MatrixCoord(0, GameHouseKeeping.RandomGenerator.Next(0, GameBorder.WorldCols - 2));
+
+            List<GameObject> produced = new List<GameObject>();
+
+            int objetcTypeIndex = -1;
+
+            if (GameHouseKeeping.GetProbabilityPercentage(0.5))
+            {
+                objetcTypeIndex = 0;
+            }
+
+            if (GameHouseKeeping.GetProbabilityPercentage(5))
+            {
+                objetcTypeIndex = 1;
+            }
+
+            switch (objetcTypeIndex)
+            {
+                case 0:
+                    produced.Add(new Item(initialCoord));
+                    break;
+                case 1:
+                    produced.Add(new EnemyShip(initialCoord.Col));
+                    break;
+                default:
+                    break;
+            }
+
+            return produced;
         }
     }
 }

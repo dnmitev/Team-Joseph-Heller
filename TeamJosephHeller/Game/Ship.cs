@@ -36,6 +36,7 @@
             {
                 case "ship": this.IsDestroyed = true; break;
                 case "bullet": this.TakeDamage((collideWith as Bullet).Damage); break;
+                  case "meteor": this.TakeDamage((collideWith as Meteors).Damage); break;
                 default: break;
             }
         }

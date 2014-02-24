@@ -8,13 +8,13 @@
         public string ExMessage { get; set; }
 
         //constructors
-        public GameException(string ExMessage)
+        public GameException(string еxMessage)
             : base(ExMessage)
         {
 
         }
 
-        public GameException(string ExMessage, Exception innerEx)
+        public GameException(string еxMessage, Exception innerEx)
             : base(ExMessage, innerEx)
         {
 

@@ -2,11 +2,13 @@
 {
     using System;
     using System.Linq;
+    using System.Media;
     using NinjaWars.Interfaces;
 
     internal class KeyboardInterface : IUserInterface
     {
         private static readonly KeyboardInterface instance;
+        SoundPlayer shoot = new SoundPlayer(@"..\..\Sounds\Shot.wav");
 
         // Initialize the single instance
         static KeyboardInterface()
@@ -60,6 +62,7 @@
                 {
                     if (this.OnActionPressed != null)
                     {
+                        shoot.Play();
                         this.OnActionPressed(KeyboardInterface.Instance, new EventArgs());
                     }
                 }

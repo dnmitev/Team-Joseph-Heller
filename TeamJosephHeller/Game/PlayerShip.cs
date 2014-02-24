@@ -18,6 +18,8 @@
         private static readonly MatrixCoord defaultPlayerSpeed = new MatrixCoord(0, 0);
         private static readonly MatrixCoord bulletSpeed = new MatrixCoord(-1, 0);
 
+        private byte score;
+
         public PlayerShip(int col)
             : base(
                     new MatrixCoord(GameBorder.WorldRows - playerShipBody.GetUpperBound(0) - 1, col),
@@ -26,28 +28,33 @@
                   )
         {
             this.Lifes = initialLifes;
+            this.Score = 0;
         }
 
         public event EventHandler OnKilled;
-        //{
-        //    add
-        //    {
-        //        // First try to remove the handler, then re-add it
-        //        OnKilled -= value;
-        //        OnKilled += value;
-        //    }
-
-        //    remove
-        //    {
-        //        OnKilled -= value;
-        //    }
-        //}
 
         public byte Lifes { get; private set; }
+        public byte Score {
+            get
+            {
+                return this.score;
+            }
+            private set
+            {
+                if (value == byte.MaxValue)
+                {
+                    throw new MaxScoreAchievedException("A player has achieved the maximum value");
+                }
+                else
+                {
+                    this.score = value;
+                }
+            }
+        }
 
         public override MovingObject Fire()
         {
-            return new Bullet(new MatrixCoord(this.TopLeft.Row - 1, this.TopLeft.Col + 1), bulletSpeed);
+            return new Bullet(new MatrixCoord(this.TopLeft.Row - 1, this.TopLeft.Col + 1), bulletSpeed, this);
         }
 
         public virtual void MoveLeft()
@@ -88,6 +95,11 @@
             }
             this.OnKilled = null;
 
+        }
+
+        public void KillEnemy()
+        {
+            this.Score++;
         }
     }
 }

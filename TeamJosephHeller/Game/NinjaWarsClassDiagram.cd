@@ -40,7 +40,7 @@
   <Class Name="NinjaWars.PlayerShip">
     <Position X="5" Y="13.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>QAAAAAAAAIAAAABAAAIAAAAAAAAEAAAKQBgAAAAAAAA=</HashCode>
+      <HashCode>QAQAAAAAAIAAAABAAAIAAAAAAAAEAAAKQBgAAAAAAAA=</HashCode>
       <FileName>PlayerShip.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -59,9 +59,9 @@
     </TypeIdentifier>
   </Class>
   <Class Name="NinjaWars.Item">
-    <Position X="8" Y="9" Width="1.5" />
+    <Position X="7.25" Y="9" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>BAAAAAAAAIAAAAAAAAABAgAAAAAAAAQAAAIAAAAAAAA=</HashCode>
       <FileName>Item.cs</FileName>
     </TypeIdentifier>
   </Class>

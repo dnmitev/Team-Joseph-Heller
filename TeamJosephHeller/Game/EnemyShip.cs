@@ -3,10 +3,12 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using System.Media;
     using NinjaWars.Interfaces;
 
     public class EnemyShip : Ship
     {
+        SoundPlayer killEnemySound = new SoundPlayer(@"..\..\Sounds\Explosion.wav");
         private static readonly char[,] enemyShipBody = new char[,] 
         { 
             { ' ','\"',' ' }, 
@@ -52,6 +54,7 @@
                     PlayerShip player = bullet.FiredBy as PlayerShip;
                     if (player != null)
                     {
+                        killEnemySound.Play();
                         player.KillEnemy();
                     }
                 }

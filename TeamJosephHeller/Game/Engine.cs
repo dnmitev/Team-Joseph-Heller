@@ -99,7 +99,15 @@
                     this.renderer.EnqueueForRendering(obj);
                 }
 
-                CollisionDispatcher.HandleCollisions(this.allObjects);
+                try
+                {
+                    CollisionDispatcher.HandleCollisions(this.allObjects);
+                    if (this.playerShip.IsDestroyed) break;
+                }
+                catch (MaxScoreAchievedException)
+                {
+                    break;
+                }
 
                 List<GameObject> producedObjects = new List<GameObject>();
 
@@ -114,6 +122,7 @@
 
                 AddGameObjectsToEngine(producedObjects);
                 AddGameObjectsToEngine(GenerateRandomObject());
+
             }
         }
 

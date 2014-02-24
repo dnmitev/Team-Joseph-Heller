@@ -13,9 +13,9 @@
 
         private static readonly MatrixCoord defaultItemSpeed = new MatrixCoord(1, 0);
 
-        protected char[,] Body { get; protected set; }
+        protected char[,] Body { get; set; }
 
-        public Item(MatrixCoord topLeft, char[,] body = defaultItemBody)
+        public Item(MatrixCoord topLeft)
             : base(topLeft, defaultItemBody, defaultItemSpeed)
         {
             this.Body = body;

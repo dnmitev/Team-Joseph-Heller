@@ -48,7 +48,7 @@
     <Compile Include="EnemyShip.cs" />
     <Compile Include="Engine.cs" />
     <Compile Include="GameBorder.cs" />
-    <Compile Include="GameException.cs" />
+    <Compile Include="MaxScoreAchievedException.cs" />
     <Compile Include="GameHouseKeeping.cs" />
     <Compile Include="GameObject.cs" />
     <Compile Include="Interfaces\ICollidable.cs" />

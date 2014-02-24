@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using NinjaWars.Interfaces;
 
     public class EnemyShip : Ship
     {
@@ -25,7 +26,7 @@
 
         public override MovingObject Fire()
         {
-            return new Bullet(new MatrixCoord(this.TopLeft.Row + 2, this.TopLeft.Col + 1), bulletSpeed);
+            return new Bullet(new MatrixCoord(this.TopLeft.Row + 2, this.TopLeft.Col + 1), bulletSpeed, this);
         }
 
         public override IEnumerable<GameObject> ProduceObjects()
@@ -38,6 +39,23 @@
             }
 
             return bullet;
+        }
+
+        public override void RespondToCollision(ICollidable collideWith)
+        {
+            base.RespondToCollision(collideWith);
+            if (this.IsDestroyed)
+            {
+                Bullet bullet = collideWith as Bullet;
+                if (bullet != null)
+                {
+                    PlayerShip player = bullet.FiredBy as PlayerShip;
+                    if (player != null)
+                    {
+                        player.KillEnemy();
+                    }
+                }
+            }
         }
     }
 }

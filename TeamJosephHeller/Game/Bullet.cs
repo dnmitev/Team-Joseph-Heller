@@ -12,10 +12,11 @@
 
         private uint damage;
 
-        public Bullet(MatrixCoord topLeft, MatrixCoord speed, uint damage = 1)
+        public Bullet(MatrixCoord topLeft, MatrixCoord speed, GameObject firer, uint damage = 1)
             : base(topLeft, bulletBody, speed)
         {
             this.Damage = damage;
+            this.FiredBy = firer;
         }
 
         public virtual uint Damage
@@ -30,6 +31,8 @@
                 this.damage = value;
             }
         }
+
+        public GameObject FiredBy { get; private set; }
 
         public override void RespondToCollision(ICollidable collideWith)
         {

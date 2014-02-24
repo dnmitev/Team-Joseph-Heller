@@ -166,6 +166,11 @@
             {
                 objetcTypeIndex = 1;
             }
+            
+             if (GameHouseKeeping.GetProbabilityPercentage(2))
+            {
+                objetcTypeIndex = 2;
+            }
 
             switch (objetcTypeIndex)
             {
@@ -174,6 +179,9 @@
                     break;
                 case 1:
                     produced.Add(new EnemyShip(initialCoord.Col));
+                    break;
+                case 2:
+                    produced.Add(new Meteors(initialCoord)); //second case for meteors
                     break;
                 default:
                     break;

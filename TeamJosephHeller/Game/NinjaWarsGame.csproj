@@ -60,6 +60,7 @@
     <Compile Include="Item.cs" />
     <Compile Include="KeyboardInterface.cs" />
     <Compile Include="MatrixCoord.cs" />
+    <Compile Include="Meteors.cs" />
     <Compile Include="MovingObject.cs" />
     <Compile Include="NinjaWarsMain.cs" />
     <Compile Include="PlayerShip.cs" />

@@ -166,8 +166,8 @@
             {
                 objetcTypeIndex = 1;
             }
-            
-             if (GameHouseKeeping.GetProbabilityPercentage(2))
+
+            if (GameHouseKeeping.GetProbabilityPercentage(10))
             {
                 objetcTypeIndex = 2;
             }

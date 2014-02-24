@@ -1,8 +1,6 @@
 namespace NinjaWars
 {
     using NinjaWars.Interfaces;
-    using System;
-    using System.Linq;
 
     public class Meteors : MovingObject
     {

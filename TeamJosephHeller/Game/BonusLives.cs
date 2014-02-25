@@ -36,11 +36,12 @@ namespace NinjaWars
                 this.addLives = value;
             }
         }
+        public GameObject FiredBy { get; private set; }
         public override void RespondToCollision(Interfaces.ICollidable collideWith)
         {
             if (collideWith.GetCollisionGroupString() == "ship")
             {
-                this.AddLives++;
+                this.AddLives++;// i think this is wrong
             }
         }
 

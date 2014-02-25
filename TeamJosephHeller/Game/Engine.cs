@@ -171,6 +171,10 @@
             {
                 objetcTypeIndex = 2;
             }
+            if (GameHouseKeeping.GetProbabilityPercentage(0.6))
+            {
+                objetcTypeIndex = 3;
+            }
 
             switch (objetcTypeIndex)
             {
@@ -182,6 +186,8 @@
                     break;
                 case 2:
                     produced.Add(new Meteors(initialCoord)); //second case for meteors
+                    break;
+                case 3: produced.Add(new BonusLives(initialCoord));
                     break;
                 default:
                     break;

@@ -10,9 +10,11 @@
         protected const int InitialHealth = 5;
         protected const int BulletSpeed = 1;
 
-        public Ship(MatrixCoord topLeft, char[,] body, MatrixCoord speed) : base(topLeft, body, speed)
+         public Ship(MatrixCoord topLeft, char[,] body, MatrixCoord speed)
+            : base(topLeft, body, speed)
         {
             this.Health = InitialHealth;
+            InfoBox.GameInfo(this.Health);
         }
 
         public virtual uint Health { get; protected set; }
@@ -20,8 +22,14 @@
         public virtual void TakeDamage(uint damage)
         {
             this.Health -= damage;
-            if (this.Health == 0)
+            InfoBox.GameInfo(this.Health);
+            if (this.Health <= 0)
+            {
                 this.IsDestroyed = true;
+                End.Title();
+                Environment.Exit(1);
+        
+            }
         }
 
         public override string GetCollisionGroupString()

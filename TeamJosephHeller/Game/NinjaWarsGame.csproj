@@ -43,7 +43,6 @@
   <ItemGroup>
     <Compile Include="BonusLives.cs" />
     <Compile Include="Bullet.cs" />
-    <Compile Include="CollisionData.cs" />
     <Compile Include="CollisionDispatcher.cs" />
     <Compile Include="ConsoleRenderer.cs" />
     <Compile Include="EnemyShip.cs" />

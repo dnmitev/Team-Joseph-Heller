@@ -22,7 +22,7 @@
                 int startRow = -titleLines.Length;
                 int endRow = (Console.WindowHeight - titleLines.Length) / 2;
 
-                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.ForegroundColor = ConsoleColor.Green;
 
                 for (int row = startRow; row < endRow; row++)
                 {

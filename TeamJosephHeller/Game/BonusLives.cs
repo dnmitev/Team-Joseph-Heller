@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace NinjaWars
+﻿namespace NinjaWars
 {
-    class BonusLives : Item
+    using System;
+    using System.Linq;
+
+    internal class BonusLives : Item
     {
         public new const string CollisionGroupString = "life";
 
@@ -16,10 +13,7 @@ namespace NinjaWars
 
         private int addLives = 0;
 
-        protected char[,] Body { get; set; }
-
-        public BonusLives(MatrixCoord topLeft, int addLives = 1)
-            : base(topLeft)
+        public BonusLives(MatrixCoord topLeft, int addLives = 1) : base(topLeft)
         {
             this.AddLives = addLives;
         }
@@ -36,7 +30,11 @@ namespace NinjaWars
                 this.addLives = value;
             }
         }
+
         public GameObject FiredBy { get; private set; }
+
+        protected char[,] Body { get; private set; }
+
         public override void RespondToCollision(Interfaces.ICollidable collideWith)
         {
             if (collideWith.GetCollisionGroupString() == "ship")
@@ -51,4 +49,3 @@ namespace NinjaWars
         }
     }
 }
-

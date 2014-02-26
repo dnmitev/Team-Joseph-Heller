@@ -48,7 +48,7 @@
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>QAQAAAAAAIgAAAhAAAIIAAAAAAAEAAAKQBgAAAAAAAA=</HashCode>
+      <HashCode>QAQAAAAAAIgAAAhAACIIAAAAAAAEAAAqQBgAAAAAAAA=</HashCode>
       <FileName>PlayerShip.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -62,7 +62,7 @@
   <Class Name="NinjaWars.Bullet">
     <Position X="1.25" Y="9" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>BAAAAADAAIAAgAAAgAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <HashCode>BAAAAADAAIAAAAAAgAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
       <FileName>Bullet.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -133,7 +133,7 @@
   <Class Name="NinjaWars.NinjaWarsMain" Collapsed="true">
     <Position X="16.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAAAAAA=</HashCode>
       <FileName>NinjaWarsMain.cs</FileName>
     </TypeIdentifier>
   </Class>

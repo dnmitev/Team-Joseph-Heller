@@ -14,8 +14,7 @@ namespace NinjaWars
 
         private uint damage;
 
-        public Meteors(MatrixCoord topLeft, uint damage = 3)
-            : base(topLeft, meteorBody, defaultMeteorSpeed)
+        public Meteors(MatrixCoord topLeft, uint damage = 3) : base(topLeft, meteorBody, defaultMeteorSpeed)
         {
             this.Damage = damage;
         }
@@ -39,9 +38,14 @@ namespace NinjaWars
         {
             switch (collideWith.GetCollisionGroupString())
             {
-                case "ship": this.IsDestroyed = true; break;
-                case "meteor": this.IsDestroyed = true; break;
-                default: break;
+                case "ship":
+                    this.IsDestroyed = true;
+                    break;
+                case "meteor":
+                    this.IsDestroyed = true;
+                    break;
+                default:
+                    break;
             }
         }
 

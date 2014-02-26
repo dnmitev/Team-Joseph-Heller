@@ -10,8 +10,7 @@
         protected const int InitialHealth = 5;
         protected const int BulletSpeed = 1;
 
-        public Ship(MatrixCoord topLeft, char[,] body, MatrixCoord speed)
-            : base(topLeft, body, speed)
+        public Ship(MatrixCoord topLeft, char[,] body, MatrixCoord speed) : base(topLeft, body, speed)
         {
             this.Health = InitialHealth;
         }
@@ -21,24 +20,35 @@
         public virtual void TakeDamage(uint damage)
         {
             this.Health -= damage;
-            if (this.Health == 0) this.IsDestroyed = true;
+            if (this.Health == 0)
+                this.IsDestroyed = true;
         }
 
         public override string GetCollisionGroupString()
         {
             return CollisionGroupString;
         }
+
         public abstract MovingObject Fire();
 
         public override void RespondToCollision(ICollidable collideWith)
         {
             switch (collideWith.GetCollisionGroupString())
             {
-                case "ship": this.IsDestroyed = true; break;
-                case "bullet": this.TakeDamage((collideWith as Bullet).Damage); break;
-                  case "meteor": this.TakeDamage((collideWith as Meteors).Damage); break;
-                  case "life": this.Health = +1; break;
-                default: break;
+                case "ship":
+                    this.IsDestroyed = true; 
+                    break;
+                case "bullet":
+                    this.TakeDamage((collideWith as Bullet).Damage);
+                    break;
+                case "meteor":
+                    this.TakeDamage((collideWith as Meteors).Damage);
+                    break;
+                case "life":
+                    this.Health = +1;
+                    break;
+                default:
+                    break;
             }
         }
     }

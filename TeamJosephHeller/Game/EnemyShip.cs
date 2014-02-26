@@ -8,12 +8,11 @@
 
     public class EnemyShip : Ship
     {
-        SoundPlayer killEnemySound = new SoundPlayer(@"..\..\Sounds\Explosion.wav");
         private static readonly char[,] enemyShipBody = new char[,] 
-        { 
-            { ' ','\"',' ' }, 
-            { '\\','E','/' },
-            {' ','v',' '}
+        {
+            { ' ', '\"', ' ' },
+            { '\\', 'E', '/' },
+            { ' ', 'v', ' ' }
         };
 
         private static readonly MatrixCoord defaultEnemySpeed = new MatrixCoord(0, 0);
@@ -21,8 +20,9 @@
 
         private const int ShootProbability = 3;
 
-        public EnemyShip(int col)
-            : base(new MatrixCoord(enemyShipBody.GetUpperBound(0), col), enemyShipBody, defaultEnemySpeed)
+        private readonly SoundPlayer killEnemySound = new SoundPlayer(@"..\..\Sounds\Explosion.wav");
+
+        public EnemyShip(int col) : base(new MatrixCoord(enemyShipBody.GetUpperBound(0), col), enemyShipBody, defaultEnemySpeed)
         {
         }
 
@@ -46,15 +46,18 @@
         public override void RespondToCollision(ICollidable collideWith)
         {
             base.RespondToCollision(collideWith);
+
             if (this.IsDestroyed)
             {
                 Bullet bullet = collideWith as Bullet;
+
                 if (bullet != null)
                 {
                     PlayerShip player = bullet.FiredBy as PlayerShip;
+
                     if (player != null)
                     {
-                        killEnemySound.Play();
+                        this.killEnemySound.Play();
                         player.KillEnemy();
                     }
                 }

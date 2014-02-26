@@ -8,10 +8,11 @@
     internal class KeyboardInterface : IUserInterface
     {
         private static readonly KeyboardInterface instance;
-        SoundPlayer shoot = new SoundPlayer(@"..\..\Sounds\Shot.wav");
+
+        private readonly SoundPlayer shoot = new SoundPlayer(@"..\..\Sounds\Shot.wav");
 
         // Initialize the single instance
-        static KeyboardInterface()
+        private static KeyboardInterface()
         {
             instance = new KeyboardInterface();
         }
@@ -62,7 +63,7 @@
                 {
                     if (this.OnActionPressed != null)
                     {
-                        shoot.Play();
+                        this.shoot.Play();
                         this.OnActionPressed(KeyboardInterface.Instance, new EventArgs());
                     }
                 }

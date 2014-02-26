@@ -12,8 +12,8 @@
         }
 
 
-        public MaxScoreAchievedException(string ExMessage, Exception innerEx)
-            : base(ExMessage, innerEx)
+        public MaxScoreAchievedException(string exMessage, Exception innerEx)
+            : base(exMessage, innerEx)
         {
 
         }

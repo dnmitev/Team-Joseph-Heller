@@ -11,6 +11,20 @@
 
         protected MatrixCoord topLeft;
 
+        protected char[,] body;
+
+        protected GameObject(MatrixCoord topLeft, char[,] body)
+        {
+            this.TopLeft = topLeft;
+
+            //int imageRows = body.GetLength(0);
+            //int imageCols = body.GetLength(1);
+
+            this.body = this.CopyBodyMatrix(body);
+
+            this.IsDestroyed = false;
+        }
+
         public MatrixCoord TopLeft
         {
             get
@@ -24,21 +38,7 @@
             }
         }
 
-        protected char[,] body;
-
         public bool IsDestroyed { get; protected set; }
-
-        protected GameObject(MatrixCoord topLeft, char[,] body)
-        {
-            this.TopLeft = topLeft;
-
-            int imageRows = body.GetLength(0);
-            int imageCols = body.GetLength(1);
-
-            this.body = this.CopyBodyMatrix(body);
-
-            this.IsDestroyed = false;
-        }
 
         public abstract void Update();
 
@@ -72,7 +72,22 @@
             return GameObject.CollisionGroupString;
         }
 
-        char[,] CopyBodyMatrix(char[,] matrixToCopy)
+        public virtual MatrixCoord GetTopLeft()
+        {
+            return this.TopLeft;
+        }
+
+        public virtual char[,] GetImage()
+        {
+            return this.CopyBodyMatrix(this.body);
+        }
+
+        public virtual IEnumerable<GameObject> ProduceObjects()
+        {
+            return new List<GameObject>();
+        }
+
+        private char[,] CopyBodyMatrix(char[,] matrixToCopy)
         {
             int rows = matrixToCopy.GetLength(0);
             int cols = matrixToCopy.GetLength(1);
@@ -90,21 +105,6 @@
             return result;
         }
 
-        public virtual MatrixCoord GetTopLeft()
-        {
-            return this.TopLeft;
-        }
-
-        public virtual char[,] GetImage()
-        {
-            return this.CopyBodyMatrix(this.body);
-        }
-
-        public virtual IEnumerable<GameObject> ProduceObjects()
-        {
-            return new List<GameObject>();
-        }
-
         MatrixCoord IRenderable.GetTopLeft()
         {
             return this.topLeft;
@@ -114,7 +114,6 @@
         {
             throw new NotImplementedException();
         }
-
 
         List<MatrixCoord> ICollidable.GetCollisionProfile()
         {

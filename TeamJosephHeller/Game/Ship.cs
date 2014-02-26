@@ -22,13 +22,9 @@
         public virtual void TakeDamage(uint damage)
         {
             this.Health -= damage;
-            InfoBox.GameInfo(this.Health);
             if (this.Health <= 0)
             {
-                this.IsDestroyed = true;
-                End.Title();
-                Environment.Exit(1);
-        
+                this.IsDestroyed = true;        
             }
         }
 

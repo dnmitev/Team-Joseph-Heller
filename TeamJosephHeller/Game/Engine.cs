@@ -47,30 +47,6 @@
             this.playerShip = player;
         }
         
-        //public virtual void AddObject(GameObject obj)
-        //{
-        //    if (obj is MovingObject)
-        //    {
-        //        this.AddMovingObject(obj as MovingObject);
-        //    }
-        //    else
-        //    {
-        //        if (obj is PlayerShip)
-        //        {
-        //            AddPlayerShip(obj);
-        //        }
-        //        else
-        //        {
-        //            this.AddStaticObject(obj);
-        //        }
-        //    }
-        //}
-        //private void AddPlayerShip(GameObject obj)
-        //{
-        //    //TODO: we should remove the previous PlayerShip from this.allObjects
-        //    this.playerShip = obj as PlayerShip;
-        //    //this.AddStaticObject(obj);
-        //}
         public virtual void MovePlayerShipLeft()
         {
             this.playerShip.MoveLeft();
@@ -121,8 +97,6 @@
                 }
 
                 this.allObjects.RemoveAll(obj => obj.IsDestroyed);
-                // this.movingObjects.RemoveAll(obj => obj.IsDestroyed);
-                // this.staticObjects.RemoveAll(obj => obj.IsDestroyed);
 
                 this.AddGameObjectsToEngine(producedObjects);
                 this.AddGameObjectsToEngine(GenerateRandomObject());

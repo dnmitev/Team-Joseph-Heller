@@ -7,6 +7,10 @@
 
     public class NinjaWarsMain
     {
+
+        static Engine gameEngine;
+        static IUserInterface keyboard;
+
         private static void Main()
         {
             //set console size and Intro
@@ -14,24 +18,7 @@
 
             Intro.Title();
 
-            GameBorder borders = new GameBorder();
-            PlayerShip player = new PlayerShip(5);
-            EnemyShip enemy = new EnemyShip(5);
-            Item item = new Item(
-                new MatrixCoord(
-                    GameHouseKeeping.RandomGenerator.Next(0, GameBorder.WorldRows / 2),
-                    GameHouseKeeping.RandomGenerator.Next(0, GameBorder.WorldCols - 1)));
-
-            IRenderer renderer = new GameRenderer(borders, new PlayerInformation(player, borders));
-            IUserInterface keyboard = KeyboardInterface.Instance;
-
-            Engine gameEngine = new Engine(renderer, keyboard);
-
-            gameEngine.AddPlayer(player);
-            gameEngine.AddObject(player);
-            gameEngine.AddObject(enemy);
-            gameEngine.AddObject(item);
-            gameEngine.AddGameObjectsToEngine(GenerateRandomObject());
+            InitializeGame();
 
             keyboard.OnLeftPressed += (sender, eventInfo) =>
             {
@@ -49,6 +36,8 @@
             };
 
             gameEngine.Run();
+
+            End.Title();
         }
 
         private static List<GameObject> GenerateRandomObject()
@@ -72,6 +61,28 @@
             }
 
             return produced;
+        }
+
+        static void InitializeGame()
+        {
+             GameBorder borders = new GameBorder();
+            PlayerShip player = new PlayerShip(5);
+            EnemyShip enemy = new EnemyShip(5);
+            Item item = new Item(
+                new MatrixCoord(
+                    GameHouseKeeping.RandomGenerator.Next(0, GameBorder.WorldRows / 2),
+                    GameHouseKeeping.RandomGenerator.Next(0, GameBorder.WorldCols - 1)));
+
+            IRenderer renderer = new GameRenderer(borders, new PlayerInformation(player, borders));
+            keyboard = KeyboardInterface.Instance;
+
+            gameEngine = new Engine(renderer, keyboard);
+
+            gameEngine.AddPlayer(player);
+            gameEngine.AddObject(player);
+            gameEngine.AddObject(enemy);
+            gameEngine.AddObject(item);
+            gameEngine.AddGameObjectsToEngine(GenerateRandomObject());
         }
     }
 }

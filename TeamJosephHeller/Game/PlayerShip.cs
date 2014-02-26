@@ -43,7 +43,7 @@
             {
                 if (value == byte.MaxValue)
                 {
-                    throw new MaxScoreAchievedException("A player has achieved the maximum value");
+                    throw new MaxScoreAchievedException("A player has achieved the maximum score possible");
                 }
                 else
                 {

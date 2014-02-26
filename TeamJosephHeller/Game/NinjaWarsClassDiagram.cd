@@ -97,9 +97,10 @@
   <Class Name="NinjaWars.GameBorder" Collapsed="true">
     <Position X="12.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAECAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAIAAAAAAAAAAECAAQAAAAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>GameBorder.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="NinjaWars.GameHouseKeeping" Collapsed="true">
     <Position X="14.5" Y="1.5" Width="1.5" />

@@ -18,14 +18,13 @@
             this.renderContextMatrixRows = this.renderContextMatrix.GetLength(0);
             this.renderContextMatrixCols = this.renderContextMatrix.GetLength(1);
 
-            //Console.SetWindowSize(GameBorder.WorldCols, GameBorder.WorldRows);
-            //Console.BufferHeight = GameBorder.WorldRows;
-            //Console.BufferWidth = GameBorder.WorldCols;
+            Console.SetWindowSize(visibleConsoleCols + 5, visibleConsoleRows + 5);
+            Console.SetBufferSize(visibleConsoleCols+5, visibleConsoleRows+5);
 
             this.ClearQueue();
         }
 
-        public void EnqueueForRendering(IRenderable obj)
+        public virtual void EnqueueForRendering(IRenderable obj)
         {
             char[,] objImage = obj.GetImage();
 
@@ -69,7 +68,7 @@
             Console.WriteLine(scene.ToString());
         }
 
-        public void ClearQueue()
+        public virtual void ClearQueue()
         {
             for (int row = 0; row < this.renderContextMatrixRows; row++)
             {

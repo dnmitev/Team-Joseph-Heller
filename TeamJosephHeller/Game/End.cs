@@ -1,4 +1,5 @@
-Enter file contents herenamespace NinjaWars
+//Enter file contents here
+namespace NinjaWars
 {
     using System;
     using System.Collections.Generic;

@@ -14,10 +14,24 @@
 
             Intro.Title();
 
-            IRenderer renderer = new ConsoleRenderer(GameBorder.WorldRows, GameBorder.WorldCols);
+            GameBorder borders = new GameBorder();
+            PlayerShip player = new PlayerShip(5);
+            EnemyShip enemy = new EnemyShip(5);
+            Item item = new Item(
+                new MatrixCoord(
+                    GameHouseKeeping.RandomGenerator.Next(0, GameBorder.WorldRows / 2),
+                    GameHouseKeeping.RandomGenerator.Next(0, GameBorder.WorldCols - 1)));
+
+            IRenderer renderer = new GameRenderer(borders, new PlayerInformation(player, borders));
             IUserInterface keyboard = KeyboardInterface.Instance;
 
             Engine gameEngine = new Engine(renderer, keyboard);
+
+            gameEngine.AddPlayer(player);
+            gameEngine.AddObject(player);
+            gameEngine.AddObject(enemy);
+            gameEngine.AddObject(item);
+            gameEngine.AddGameObjectsToEngine(GenerateRandomObject());
 
             keyboard.OnLeftPressed += (sender, eventInfo) =>
             {
@@ -33,28 +47,6 @@
             {
                 gameEngine.AddObject(gameEngine.EngagePlayerWeapons());
             };
-
-            PlayerShip player = new PlayerShip(5);
-            gameEngine.AddPlayer(player);
-
-            gameEngine.AddObject(player);
-
-            EnemyShip enemy = new EnemyShip(5);
-            gameEngine.AddObject(enemy);
-
-            Item item = new Item(
-                new MatrixCoord(
-                    GameHouseKeeping.RandomGenerator.Next(0, GameBorder.WorldRows / 2),
-                    GameHouseKeeping.RandomGenerator.Next(0, GameBorder.WorldCols - 1)));
-
-            gameEngine.AddObject(item);
-
-            List<GameObject> produced = GenerateRandomObject();
-
-            foreach (var obj in produced)
-            {
-                gameEngine.AddObject(obj);
-            }
 
             gameEngine.Run();
         }

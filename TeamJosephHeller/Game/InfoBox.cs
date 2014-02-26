@@ -1,7 +1,9 @@
-Enter file contents hereusing System;
+//Enter file contents here
 
 namespace NinjaWars
 {
+    using System;
+
     class InfoBox
     {
         private InfoBox()

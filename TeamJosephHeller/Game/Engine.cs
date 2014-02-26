@@ -188,7 +188,7 @@
             return produced;
         }
 
-        private void AddGameObjectsToEngine(List<GameObject> producedObjects)
+        public void AddGameObjectsToEngine(List<GameObject> producedObjects)
         {
             foreach (var obj in producedObjects)
             {

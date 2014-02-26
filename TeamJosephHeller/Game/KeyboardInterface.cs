@@ -12,7 +12,7 @@
         private readonly SoundPlayer shoot = new SoundPlayer(@"..\..\Sounds\Shot.wav");
 
         // Initialize the single instance
-        private static KeyboardInterface()
+        static KeyboardInterface()
         {
             instance = new KeyboardInterface();
         }

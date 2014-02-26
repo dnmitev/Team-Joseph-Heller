@@ -15,14 +15,14 @@
             { ' ', 'v', ' ' }
         };
 
-        private static readonly MatrixCoord defaultEnemySpeed = new MatrixCoord(0, 0);
+        //private const MatrixCoord defaultEnemySpeed = new MatrixCoord(0, 0);
         private static readonly MatrixCoord bulletSpeed = new MatrixCoord(1, 0);
 
         private const int ShootProbability = 3;
 
         private readonly SoundPlayer killEnemySound = new SoundPlayer(@"..\..\Sounds\Explosion.wav");
 
-        public EnemyShip(int col) : base(new MatrixCoord(enemyShipBody.GetUpperBound(0), col), enemyShipBody, defaultEnemySpeed)
+        public EnemyShip(int col, MatrixCoord speed) : base(new MatrixCoord(enemyShipBody.GetUpperBound(0), col), enemyShipBody, speed)
         {
         }
 

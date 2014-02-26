@@ -40,34 +40,11 @@
             End.Title();
         }
 
-        private static List<GameObject> GenerateRandomObject()
-        {
-            MatrixCoord initialCoord = new MatrixCoord(0, GameHouseKeeping.RandomGenerator.Next(0, GameBorder.WorldCols - 1));
-
-            List<GameObject> produced = new List<GameObject>();
-
-            int objetcTypeIndex = GameHouseKeeping.RandomGenerator.Next(0, 2);
-
-            switch (objetcTypeIndex)
-            {
-                case 0:
-                    produced.Add(new Item(initialCoord));
-                    break;
-                case 1:
-                    produced.Add(new EnemyShip(initialCoord.Col));
-                    break;
-                default:
-                    break;
-            }
-
-            return produced;
-        }
-
         static void InitializeGame()
         {
              GameBorder borders = new GameBorder();
             PlayerShip player = new PlayerShip(5);
-            EnemyShip enemy = new EnemyShip(5);
+            EnemyShip enemy = new EnemyShip(5, new MatrixCoord(0,0));
             Item item = new Item(
                 new MatrixCoord(
                     GameHouseKeeping.RandomGenerator.Next(0, GameBorder.WorldRows / 2),
@@ -82,7 +59,6 @@
             gameEngine.AddObject(player);
             gameEngine.AddObject(enemy);
             gameEngine.AddObject(item);
-            gameEngine.AddGameObjectsToEngine(GenerateRandomObject());
         }
     }
 }

@@ -44,6 +44,9 @@ namespace NinjaWars
                 case "meteor":
                     this.IsDestroyed = true;
                     break;
+                case "bullet":
+                    this.IsDestroyed = true;
+                    break;
                 default:
                     break;
             }

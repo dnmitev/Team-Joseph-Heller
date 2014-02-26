@@ -21,11 +21,12 @@
 
         public virtual void TakeDamage(uint damage)
         {
-            this.Health -= damage;
-            if (this.Health <= 0)
+            if (this.Health <= damage)
             {
                 this.IsDestroyed = true;        
             }
+
+            this.Health -= damage;
         }
 
         public override string GetCollisionGroupString()

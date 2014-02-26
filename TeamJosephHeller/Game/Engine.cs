@@ -147,7 +147,7 @@
                     produced.Add(new Item(initialCoord));
                     break;
                 case 1:
-                    produced.Add(new EnemyShip(initialCoord.Col));
+                    produced.Add(new EnemyShip(initialCoord.Col, new MatrixCoord(GameHouseKeeping.RandomGenerator.Next(3), 0)));
                     break;
                 case 2:
                     produced.Add(new Meteors(initialCoord)); //second case for meteors

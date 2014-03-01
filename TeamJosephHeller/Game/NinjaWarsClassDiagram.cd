@@ -1,65 +1,65 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="NinjaWars.GameObject">
-    <Position X="5.5" Y="0.5" Width="2.5" />
+  <Class Name="NinjaWars.GameObject" Collapsed="true">
+    <Position X="5.5" Y="0.75" Width="2.5" />
     <TypeIdentifier>
       <HashCode>BESAAAAAAIAAABAQAAIAABAQAQAAgAQAAIAAAAGAEAA=</HashCode>
       <FileName>GameObject.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="NinjaWars.MovingObject">
-    <Position X="6" Y="6.25" Width="1.5" />
+  <Class Name="NinjaWars.MovingObject" Collapsed="true">
+    <Position X="6" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAACAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MovingObject.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="NinjaWars.Ship">
-    <Position X="5" Y="9" Width="1.5" />
+  <Class Name="NinjaWars.Ship" Collapsed="true">
+    <Position X="5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BAAACAAAAMAAAAAAAAAAAAAAAAgEAAQAAAAAgAAAAAA=</HashCode>
       <FileName>Ship.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="NinjaWars.ConsoleRenderer" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="1.25" Y="3.5" Width="1.5" />
+    <Position X="4.25" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAQAAAAAAABAAAAIAAAAAABAAACAAAAEAAAA=</HashCode>
       <FileName>ConsoleRenderer.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="NinjaWars.PlayerShip">
-    <Position X="6" Y="13" Width="1.5" />
+  <Class Name="NinjaWars.PlayerShip" Collapsed="true">
+    <Position X="6" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QAQAAAAAAIgAAAhAACIIAAAAAAAEAAAqQBgAAAAAAAA=</HashCode>
       <FileName>PlayerShip.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="NinjaWars.EnemyShip">
-    <Position X="3.75" Y="13" Width="1.5" />
+  <Class Name="NinjaWars.EnemyShip" Collapsed="true">
+    <Position X="3.75" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAABAIAAAAAAAAAAEAAAAAIAAAAAAAQA=</HashCode>
       <FileName>EnemyShip.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="NinjaWars.Bullet">
-    <Position X="1.5" Y="9" Width="1.5" />
+  <Class Name="NinjaWars.Bullet" Collapsed="true">
+    <Position X="1.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BAAAAADAAIAAAAAAgAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
       <FileName>Bullet.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="NinjaWars.Item">
-    <Position X="8.25" Y="9" Width="1.5" />
+  <Class Name="NinjaWars.Item" Collapsed="true">
+    <Position X="8.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BAAAAAAAAIAAAAAAAAABAgAAAAAAAAQAAAIAAAAAAAA=</HashCode>
       <FileName>Item.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="NinjaWars.Meteors">
-    <Position X="10.5" Y="9" Width="1.5" />
+  <Class Name="NinjaWars.Meteors" Collapsed="true">
+    <Position X="10.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BEAAAACAAIAAgAAAgAABAAAAAAAAAAQAAAAAAAAAQAA=</HashCode>
       <FileName>Meteors.cs</FileName>
@@ -124,14 +124,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="NinjaWars.BonusLives" Collapsed="true">
-    <Position X="8.25" Y="12.5" Width="1.5" />
+    <Position X="8.25" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BAAAAAAAAIAAAAAAgAABAgAQAAAAEAQAAAIAAAAAAAA=</HashCode>
       <FileName>BonusLives.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="NinjaWars.DisplayableInformation" Collapsed="true">
-    <Position X="1.25" Y="0.5" Width="1.5" />
+    <Position X="1.25" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAEAAAAAAAAAAAAAAAIAAQAAAAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>DisplayableInformation.cs</FileName>
@@ -146,7 +146,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="NinjaWars.GameRenderer" Collapsed="true">
-    <Position X="1.25" Y="4.75" Width="1.5" />
+    <Position X="4.25" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BCBAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAIAA=</HashCode>
       <FileName>GameRenderer.cs</FileName>
@@ -160,7 +160,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="NinjaWars.PlayerInformation" Collapsed="true">
-    <Position X="1.25" Y="1.75" Width="1.5" />
+    <Position X="1.25" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAIgAAAAAAAAAAAAAAQAAAAAAABAAAAAAAAAAA=</HashCode>
       <FileName>PlayerInformation.cs</FileName>

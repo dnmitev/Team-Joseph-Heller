@@ -7,15 +7,12 @@
 
         public MaxScoreAchievedException(string msg)
             : base(msg)
-        {
-           
+        {           
         }
-
 
         public MaxScoreAchievedException(string exMessage, Exception innerEx)
             : base(exMessage, innerEx)
         {
-
         }
     }
 }
